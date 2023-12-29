@@ -22,6 +22,15 @@ async function generateJoke() {
     jokeEl.innerHTML = data.joke;
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    var audio = document.getElementById('audioplayer');
+    var playButton = document.getElementById('jokeBtn');
+
+    playButton.addEventListener('click', function () {
+        audio.play();
+    });
+});
+
 function speakJoke() {
     const textToRead = jokeEl.innerText;
 
